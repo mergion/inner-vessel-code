@@ -2,94 +2,57 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Inter:wght@300;400;500&display=swap');
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 220 15% 6%;
+    --foreground: 40 20% 85%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 220 12% 10%;
+    --card-foreground: 40 20% 85%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 220 12% 10%;
+    --popover-foreground: 40 20% 85%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 38 72% 56%;
+    --primary-foreground: 220 15% 6%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 220 10% 14%;
+    --secondary-foreground: 40 15% 75%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 220 10% 12%;
+    --muted-foreground: 220 10% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 38 72% 56%;
+    --accent-foreground: 220 15% 6%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 220 10% 18%;
+    --input: 220 10% 18%;
+    --ring: 38 72% 56%;
 
     --radius: 0.5rem;
 
+    --gold: 38 72% 56%;
+    --gold-dim: 38 40% 35%;
+    --cream: 40 20% 85%;
+    --cream-dim: 40 10% 55%;
+    --parchment: 38 25% 92%;
+    --deep: 220 15% 4%;
+
+    --font-display: 'Cormorant Garamond', Georgia, serif;
+    --font-body: 'Inter', system-ui, sans-serif;
+
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 }
@@ -101,5 +64,92 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer components {
+  .tsl-section {
+    @apply max-w-2xl mx-auto px-6 py-12 md:py-16;
+  }
+
+  .tsl-heading {
+    font-family: var(--font-display);
+    @apply text-3xl md:text-4xl lg:text-5xl font-light leading-tight tracking-tight;
+    color: hsl(var(--parchment));
+  }
+
+  .tsl-subheading {
+    font-family: var(--font-display);
+    @apply text-2xl md:text-3xl font-light leading-snug italic;
+    color: hsl(var(--gold));
+  }
+
+  .tsl-body {
+    @apply text-base md:text-lg leading-relaxed font-light;
+    color: hsl(var(--cream-dim));
+  }
+
+  .tsl-body-bright {
+    @apply text-base md:text-lg leading-relaxed font-light;
+    color: hsl(var(--cream));
+  }
+
+  .tsl-emphasis {
+    @apply text-lg md:text-xl leading-relaxed;
+    color: hsl(var(--parchment));
+    font-family: var(--font-display);
+    font-style: italic;
+  }
+
+  .tsl-scripture {
+    @apply text-base md:text-lg italic py-6 px-8 my-8 border-l-2;
+    border-color: hsl(var(--gold-dim));
+    color: hsl(var(--gold));
+    font-family: var(--font-display);
+  }
+
+  .tsl-divider {
+    @apply w-16 mx-auto my-12 md:my-16;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, hsl(var(--gold-dim)), transparent);
+  }
+
+  .tsl-gold-text {
+    color: hsl(var(--gold));
+  }
+
+  .tsl-cta-button {
+    @apply inline-block px-10 py-5 text-lg font-medium tracking-wide uppercase transition-all duration-300;
+    font-family: var(--font-body);
+    background: linear-gradient(135deg, hsl(var(--gold)), hsl(38, 60%, 45%));
+    color: hsl(var(--deep));
+    letter-spacing: 0.15em;
+    font-size: 0.875rem;
+  }
+
+  .tsl-cta-button:hover {
+    background: linear-gradient(135deg, hsl(38, 80%, 62%), hsl(var(--gold)));
+    transform: translateY(-1px);
+    box-shadow: 0 8px 30px hsl(var(--gold) / 0.25);
+  }
+
+  .tsl-testimony-card {
+    @apply p-8 my-8;
+    background: hsl(var(--card));
+    border-left: 2px solid hsl(var(--gold-dim));
+  }
+
+  .tsl-bullet {
+    @apply flex items-start gap-4 py-3;
+  }
+
+  .tsl-bullet-icon {
+    @apply flex-shrink-0 w-2 h-2 mt-2.5 rounded-full;
+    background: hsl(var(--gold));
   }
 }

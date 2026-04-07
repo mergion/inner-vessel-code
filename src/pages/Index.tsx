@@ -1,16 +1,45 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import TSLHero from "@/components/tsl/TSLHero";
+import TSLProof from "@/components/tsl/TSLProof";
+import TSLStory from "@/components/tsl/TSLStory";
+import TSLRockBottom from "@/components/tsl/TSLRockBottom";
+import TSLChapel from "@/components/tsl/TSLChapel";
+import TSLOrphanFrequency from "@/components/tsl/TSLOrphanFrequency";
+import TSLPrivateTeaching from "@/components/tsl/TSLPrivateTeaching";
+import TSLLineage from "@/components/tsl/TSLLineage";
+import TSLExperience from "@/components/tsl/TSLExperience";
+import TSLTransformation from "@/components/tsl/TSLTransformation";
+import TSLScience from "@/components/tsl/TSLScience";
+import TSLSpreading from "@/components/tsl/TSLSpreading";
+import TSLMission from "@/components/tsl/TSLMission";
+import TSLTestimonials from "@/components/tsl/TSLTestimonials";
+import TSLOffer from "@/components/tsl/TSLOffer";
+import TSLGuarantee from "@/components/tsl/TSLGuarantee";
+import TSLFAQ from "@/components/tsl/TSLFAQ";
+import TSLClose from "@/components/tsl/TSLClose";
 
-// IMPORTANT: Fully REPLACE this with your own code
-const PlaceholderIndex = () => {
-  // PLACEHOLDER: Replace this entire return statement with the user's app.
-  // The inline background color is intentionally not part of the design system.
+const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center" style={{ backgroundColor: '#fcfbf8' }}>
-      <img data-lovable-blank-page-placeholder="REMOVE_THIS" src="/placeholder.svg" alt="Your app will live here!" />
+    <div className="min-h-screen bg-background">
+      <TSLHero />
+      <TSLProof />
+      <TSLStory />
+      <TSLRockBottom />
+      <TSLChapel />
+      <TSLOrphanFrequency />
+      <TSLPrivateTeaching />
+      <TSLLineage />
+      <TSLExperience />
+      <TSLTransformation />
+      <TSLScience />
+      <TSLSpreading />
+      <TSLMission />
+      <TSLTestimonials />
+      <TSLOffer />
+      <TSLGuarantee />
+      <TSLFAQ />
+      <TSLClose />
     </div>
   );
 };
-
-const Index = PlaceholderIndex;
 
 export default Index;
